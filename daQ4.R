@@ -1,0 +1,10 @@
+data <- read.csv(file="F:/deliveries.csv", header=TRUE, sep=",")
+ret <- subset(data,batsman == "V Kohli")
+tot <- cbind(ret["total_runs"])
+boxplot(as.numeric(unlist(tot)))
+quantile(as.numeric(unlist(tot)), prob = c(0.9))
+
+ret <- subset(data,batsman == "MS Dhoni")
+tot <- cbind(ret["total_runs"])
+boxplot(as.numeric(unlist(tot)))
+quantile(as.numeric(unlist(tot)), prob = c(0.9))
